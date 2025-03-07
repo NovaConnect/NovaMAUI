@@ -1,0 +1,55 @@
+﻿@using NovaMAUI.Runtimes
+<Router AppAssembly="typeof(Layout.MainLayout).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        @if (ApplicationRuntimes.Theme.ToString() == "Dark")
+        {
+            <script>
+                document.body.classList.toggle('invert-mode');
+            </script>
+        }
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f7f7f7;
+            }
+
+            .error-container {
+                text-align: center;
+            }
+
+                .error-container h1 {
+                    color: #333;
+                }
+
+                .error-container p {
+                    color: #666;
+                }
+
+        </style>
+        <div class="error-container">
+            <h1 style="font-size:24px;">404</h1>
+            <p>This page could not be found.</p><br>
+            <a href="/" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2" onclick="returnHome()">
+                Return to Home
+            </a>
+        </div>
+    </NotFound>
+</Router>
+
+<script>
+    function returnHome() {
+        if (document.body.classList.contains('invert-mode')) {
+            document.body.classList.toggle('invert-mode');
+        }
+        window.location.href = '/';
+    }
+</script>

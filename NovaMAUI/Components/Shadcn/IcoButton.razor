@@ -1,0 +1,11 @@
+﻿<button @onclick="Handle" 
+		class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background border border-input h-8 w-8">
+	@((MarkupString)Icon)
+</button>
+@code {
+	[Parameter]
+	public string Icon { get; set; }
+
+	[Parameter]
+	public EventCallback Handle { get; set; }
+}

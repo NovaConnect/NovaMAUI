@@ -1,0 +1,23 @@
+[
+  {
+    "name": "主页",
+    "icon": "font22 fas fa-home",
+    "jump": "/",
+    "tooltip": "Home.",
+    "mobile": true
+  },
+  {
+    "name": "原神",
+    "icon": "font22 fas fa-code-branch",
+    "jump": "/ys",
+    "tooltip": "About.",
+    "mobile": true
+  },
+  {
+    "name": "三国杀",
+    "icon": "font22 fas fa-code-branch",
+    "jump": "/sgs",
+    "tooltip": "About.",
+    "mobile": true
+  }
+]

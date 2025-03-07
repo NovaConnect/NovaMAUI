@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaMAUI", "NovaMAUI\NovaMAUI.csproj", "{E933E7F3-710B-4284-946A-2EAE71376871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaMAUI.Runtimes", "NovaMAUI.Runtimes\NovaMAUI.Runtimes.csproj", "{480929F7-D02F-4284-80B8-BEC8C156907D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E933E7F3-710B-4284-946A-2EAE71376871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E933E7F3-710B-4284-946A-2EAE71376871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E933E7F3-710B-4284-946A-2EAE71376871}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E933E7F3-710B-4284-946A-2EAE71376871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E933E7F3-710B-4284-946A-2EAE71376871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E933E7F3-710B-4284-946A-2EAE71376871}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{480929F7-D02F-4284-80B8-BEC8C156907D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480929F7-D02F-4284-80B8-BEC8C156907D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480929F7-D02F-4284-80B8-BEC8C156907D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480929F7-D02F-4284-80B8-BEC8C156907D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5EB02D7-BB6A-4964-9D1F-FD2B736694C3}
+	EndGlobalSection
+EndGlobal

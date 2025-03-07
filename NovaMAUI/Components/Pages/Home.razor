@@ -1,0 +1,31 @@
+﻿@page "/"
+@using NovaMAUI
+@using NovaMAUI.Runtimes;
+@using NovaMAUI.Runtimes.Models;
+@using Newtonsoft.Json;
+
+<div class="dashboard">
+    <div class="info">
+        <p>OSVersion：@Environment.OSVersion.VersionString</p>
+    </div>
+
+    <div class="info">
+        <p>ProcessId：@Environment.ProcessId</p>
+    </div>
+
+    <div class="info">
+        <p>Machine Name：@Environment.MachineName</p>
+    </div>
+
+    <div class="info">
+        <p>User Name：@Environment.UserName</p>
+    </div>
+
+    <div class="info">
+        <p>User Domain Name：@Environment.UserDomainName</p>
+    </div>
+
+    <div class="info">
+        <p>Directory：@Environment.CurrentDirectory</p>
+    </div>
+</div>

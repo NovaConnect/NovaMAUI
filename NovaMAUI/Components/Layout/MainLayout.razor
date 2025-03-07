@@ -1,0 +1,60 @@
+﻿@inherits LayoutComponentBase
+@using NovaMAUI.Runtimes;
+@using NovaMAUI.Components;
+@using Microsoft.AspNetCore.Components.Web
+
+<div id="main" style="--sidebar-width:16rem;--sidebar-width-icon:3rem;overflow: hidden;" class="disNone group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar">
+    <Sidebar/>
+    <BottomBar />
+    <main style="margin:10px;padding:6px;position: relative; width: 100%;overflow: hidden;">
+        <div id="MainInner" style="overflow: hidden;margin-bottom: 70px;">
+            @Body
+        </div>
+        
+    </main>
+    
+</div>
+
+@if (ApplicationRuntimes.Loaded == false){
+    <div id="loading" class="centered">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+    </div>
+    <script>
+        setTimeout(function() {
+        document.getElementById("loading").classList.add("disNone");
+        document.getElementById("main").classList.remove("disNone");
+        }, 2300);
+        console.log("Loaded...");
+        location.reload(true);
+    </script>
+    @Load()
+}else{
+    <script>
+        setTimeout(function() {
+            document.getElementById("main").classList.remove("disNone")
+        }, 100);
+    </script>
+}
+@code{
+    object? Load(){
+        ApplicationRuntimes.Loaded = true;
+
+        return null;
+    }
+}
+
+@if (ApplicationRuntimes.Theme.ToString() == "Dark" && !ApplicationRuntimes.IsInti)
+{
+    <script>
+        console.log("toggle");
+        document.body.classList.toggle('invert-mode');
+        @ApplicationRuntimes.IsInti = true;
+    </script>
+}
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">重载</a>
+    <span class="dismiss">🗙</span>
+</div>
